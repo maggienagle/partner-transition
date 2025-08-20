@@ -26,9 +26,23 @@
 body {
     font-family: 'SharpSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-weight: 500; /* Sharp Sans Medium for body text */
-    background-color: #f7f7f7;
+    background: url('assets/profile-background.jpg') top center / 100% auto no-repeat;
     color: #333333;
     line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Black opacity overlay covering the entire screen */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* 20% black opacity */
+    z-index: 1;
 }
 
 .container {
@@ -39,6 +53,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 2; /* Above the black overlay */
 }
 
 /* Provider placeholder section */
@@ -46,7 +62,7 @@ body {
     background: white;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     text-align: center;
     width: 100%;
     max-width: 400px;
@@ -76,7 +92,7 @@ body {
 
 /* Red "Book appointment" button matching the screenshot */
 .book-appointment-btn {
-    background-color: #d73502;
+    background-color: #D71716;
     color: white;
     font-size: 16px;
     font-weight: 600; /* Sharp Sans SemiBold for button emphasis */
