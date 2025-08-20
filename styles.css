@@ -316,8 +316,8 @@ body {
 }
 
 .callout-text h4 {
-    font-size: 1.125rem;
-    font-weight: 500; /* Sharp Sans Medium */
+    font-size: 1rem;
+    font-weight: 600; /* Sharp Sans SemiBold */
     color: #333333; /* Primary text color */
     margin-bottom: 0.25rem;
 }
@@ -329,22 +329,7 @@ body {
     font-size: 0.9rem;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e2e8f0;
-    opacity: 0;
-    animation: fadeInContent 0.5s ease-out 0.7s forwards;
-}
 
-.footer-text {
-    color: #727272; /* Secondary text color */
-    font-size: 0.875rem;
-    font-weight: 500; /* Sharp Sans Medium for body text */
-    line-height: 1.5;
-}
 
 /* Button Styles */
 .manual-redirect-btn {
@@ -608,7 +593,7 @@ body {
     }
     
     .callout-text h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     .callout-text p {
