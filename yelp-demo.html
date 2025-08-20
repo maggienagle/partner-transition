@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Profile - Yelp Demo</title>
+    <!-- Preload critical Sharp Sans fonts for better performance -->
+    <link rel="preload" href="fonts/SharpSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SharpSans-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="yelp-demo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="provider-section">
+            <!-- Simulated provider content would go here -->
+            <div class="provider-placeholder">
+                <h1>Dr. Mozzarella Stick, MD</h1>
+                <p>Dermatologist • 4.8 ★ (127 reviews)</p>
+                <p>123 Main Street, City, State</p>
+            </div>
+            
+            <div class="booking-section">
+                <button class="book-appointment-btn" onclick="goToInterstitial()">
+                    Book appointment
+                </button>
+                
+                <div class="powered-by">
+                    <img src="assets/zocdoc-logo.svg" alt="Zocdoc" class="zocdoc-logo">
+                    <span>Powered by Zocdoc</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToInterstitial() {
+            // Navigate to the interstitial page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

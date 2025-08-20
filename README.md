@@ -15,8 +15,10 @@ This page serves as a bridge between Yelp's provider discovery and Zocdoc's book
 
 ```
 partner-transition/
-├── index.html          # Main HTML structure
-├── styles.css          # CSS styling (Zocdoc-themed)
+├── yelp-demo.html      # Demo Yelp page (starting point)
+├── yelp-demo.css       # Demo page styling
+├── index.html          # Main interstitial page
+├── styles.css          # Interstitial page styling (Zocdoc-themed)
 ├── script.js           # JavaScript functionality
 ├── assets/             # Brand assets directory
 │   ├── README.md       # Logo requirements and guidelines
@@ -25,12 +27,23 @@ partner-transition/
 └── README.md           # This file
 ```
 
+## 🔄 User Flow Demo
+
+This project includes a complete user journey demonstration:
+
+1. **Yelp Demo Page** (`yelp-demo.html`) - Simulates a provider profile on Yelp with a "Book appointment" button
+2. **Interstitial Page** (`index.html`) - Transition page with logos, messaging, and animation
+3. **Zocdoc Booking** - Redirects to actual Zocdoc booking URL
+
+**To see the full flow:** Start at `yelp-demo.html` → Click "Book appointment" → Experience the transition → Redirects to Zocdoc
+
 ## 🚀 Quick Start
 
 1. **Clone or download** this repository
 2. **Replace placeholder logos** in the `assets/` directory with actual brand logos
-3. **Open `index.html`** in a web browser to test
-4. **Deploy** to your web server
+3. **Open `yelp-demo.html`** in a web browser to test the full user flow
+4. **Or open `index.html`** directly to test just the interstitial page
+5. **Deploy** to your web server
 
 ### Local Testing
 ```bash
@@ -40,7 +53,9 @@ python -m http.server 8000
 # Or with Node.js
 npx serve .
 
-# Then visit http://localhost:8000
+# Then visit:
+# - http://localhost:8000/yelp-demo.html (full user flow demo)
+# - http://localhost:8000/index.html (interstitial page only)
 ```
 
 ## ⚙️ Configuration

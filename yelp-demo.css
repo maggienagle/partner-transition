@@ -1,0 +1,137 @@
+/* Yelp Demo Page Styles */
+
+/* Sharp Sans Font Faces */
+@font-face {
+    font-family: 'SharpSans';
+    src: url('fonts/SharpSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('fonts/SharpSans-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SharpSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-weight: 500; /* Sharp Sans Medium for body text */
+    background-color: #f7f7f7;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Provider placeholder section */
+.provider-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.provider-placeholder h1 {
+    font-size: 1.5rem;
+    font-weight: 600; /* Sharp Sans SemiBold for headlines */
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.provider-placeholder p {
+    color: #666666;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 500; /* Sharp Sans Medium for body text */
+}
+
+/* Booking section - now inside provider container */
+.booking-section {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Red "Book appointment" button matching the screenshot */
+.book-appointment-btn {
+    background-color: #d73502;
+    color: white;
+    font-size: 16px;
+    font-weight: 600; /* Sharp Sans SemiBold for button emphasis */
+    padding: 12px 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.book-appointment-btn:hover {
+    background-color: #b82e02;
+}
+
+.book-appointment-btn:active {
+    transform: translateY(1px);
+}
+
+/* Powered by Zocdoc section */
+.powered-by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600; /* Sharp Sans Medium for body text */
+}
+
+.zocdoc-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .provider-section {
+        padding: 1.5rem;
+    }
+    
+    .provider-placeholder h1 {
+        font-size: 1.25rem;
+        font-weight: 600; /* Sharp Sans SemiBold for mobile headlines */
+    }
+    
+    .book-appointment-btn {
+        font-size: 15px;
+        font-weight: 600; /* Sharp Sans SemiBold for mobile button */
+        padding: 11px 28px;
+    }
+}
