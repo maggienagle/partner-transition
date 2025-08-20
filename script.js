@@ -14,26 +14,10 @@ class InterstitialPage {
         this.focusOnCTA();
     }
     
-    // Get redirect URL from query parameters or use default
+    // Get redirect URL - specific Zocdoc booking URL
     getRedirectUrl() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const providerId = urlParams.get('provider_id');
-        const location = urlParams.get('location');
-        const specialty = urlParams.get('specialty');
-        
-        // Build Zocdoc URL with parameters
-        let zocdocUrl = 'https://www.zocdoc.com';
-        
-        if (providerId) {
-            zocdocUrl += `/doctor/${providerId}`;
-        } else {
-            zocdocUrl += '/search';
-            if (specialty) zocdocUrl += `?specialty=${encodeURIComponent(specialty)}`;
-            if (location) {
-                const separator = specialty ? '&' : '?';
-                zocdocUrl += `${separator}location=${encodeURIComponent(location)}`;
-            }
-        }
+        // Base booking URL
+        const baseUrl = 'https://www.zocdoc.com/booking/patientinfo/e245841b-0fb7-4ff8-917d-85657b97b706?referrerType=PatientHome';
         
         // Add UTM parameters for tracking
         const utmParams = new URLSearchParams({
@@ -42,8 +26,7 @@ class InterstitialPage {
             utm_campaign: 'yelp_integration'
         });
         
-        const separator = zocdocUrl.includes('?') ? '&' : '?';
-        return `${zocdocUrl}${separator}${utmParams.toString()}`;
+        return `${baseUrl}&${utmParams.toString()}`;
     }
     
     focusOnCTA() {
