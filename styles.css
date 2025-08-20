@@ -275,12 +275,12 @@ body {
     background: white;
     border-radius: 16px;
     padding: 2rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E2E1DF;
     text-align: left;
 }
 
 .instruction-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     font-weight: 600; /* Sharp Sans SemiBold for headlines */
     color: #333333; /* Primary text color */
     margin-bottom: 1.5rem;
@@ -475,7 +475,7 @@ body {
     
     .cta-section {
         width: 100%;
-        padding: 0 0.5rem;
+        padding: 0;
     }
     
     .instruction-card {
@@ -483,7 +483,7 @@ body {
     }
     
     .instruction-content h3 {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
     
     .callout-list {
@@ -493,7 +493,7 @@ body {
 
 @media (max-width: 480px) {
     .container {
-        padding: 0.5rem;
+        padding: 0.5rem 20px;
     }
     
     .main-content {
@@ -555,7 +555,7 @@ body {
     }
     
     .primary-message {
-        font-size: 1.125rem;
+        font-size: 1.375rem;
     }
     
     .secondary-message {
@@ -563,11 +563,11 @@ body {
     }
     
     .instruction-card {
-        padding: 1rem;
+        padding: 24px;
     }
     
     .instruction-content h3 {
-        font-size: 1.125rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
     }
     
@@ -601,7 +601,7 @@ body {
     
     .cta-section {
         width: 100%;
-        padding: 0 1rem;
+        padding: 0;
     }
     
     .manual-redirect-btn.primary-cta {
