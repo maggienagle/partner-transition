@@ -17,9 +17,11 @@ This page serves as a bridge between Yelp's provider discovery and Zocdoc's book
 partner-transition/
 ├── yelp-demo.html      # Demo Yelp page (starting point)
 ├── yelp-demo.css       # Demo page styling
-├── index.html          # Main interstitial page
+├── index.html          # Main interstitial page (manual)
+├── index-auto.html     # Auto-redirect interstitial page (10s delay)
 ├── styles.css          # Interstitial page styling (Zocdoc-themed)
-├── script.js           # JavaScript functionality
+├── script.js           # JavaScript functionality (manual)
+├── script-auto.js      # Auto-redirect JavaScript (10s countdown)
 ├── assets/             # Brand assets directory
 │   ├── README.md       # Logo requirements and guidelines
 │   ├── yelp-logo.svg   # Yelp logo placeholder
@@ -29,13 +31,15 @@ partner-transition/
 
 ## 🔄 User Flow Demo
 
-This project includes a complete user journey demonstration:
+This project includes a complete user journey demonstration with two interstitial page options:
 
 1. **Yelp Demo Page** (`yelp-demo.html`) - Simulates a provider profile on Yelp with a "Book appointment" button
-2. **Interstitial Page** (`index.html`) - Transition page with logos, messaging, and animation
+2. **Interstitial Page** - Two versions available:
+   - **Manual** (`index.html`) - Requires user to click "Book on Zocdoc" button
+   - **Auto-Redirect** (`index-auto.html`) - Automatically redirects after 10 seconds with countdown
 3. **Zocdoc Booking** - Redirects to actual Zocdoc booking URL
 
-**To see the full flow:** Start at `yelp-demo.html` → Click "Book appointment" → Experience the transition → Redirects to Zocdoc
+**To see the flow:** Start at `yelp-demo.html` → Click "Book appointment" → Experience the transition → Proceeds to Zocdoc
 
 ## 🚀 Quick Start
 
@@ -55,7 +59,8 @@ npx serve .
 
 # Then visit:
 # - http://localhost:8000/yelp-demo.html (full user flow demo)
-# - http://localhost:8000/index.html (interstitial page only)
+# - http://localhost:8000/index.html (manual interstitial page only)
+# - http://localhost:8000/index-auto.html (auto-redirect interstitial page only)
 ```
 
 ## ⚙️ Configuration

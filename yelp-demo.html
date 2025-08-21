@@ -34,8 +34,17 @@
 
     <script>
         function goToInterstitial() {
-            // Navigate to the interstitial page
-            window.location.href = 'index.html';
+            // Check URL parameters to determine which flow to use
+            const urlParams = new URLSearchParams(window.location.search);
+            const flow = urlParams.get('flow');
+            
+            // Navigate to the appropriate interstitial page based on flow type
+            if (flow === 'auto') {
+                window.location.href = 'index-auto.html';
+            } else {
+                // Default to manual flow
+                window.location.href = 'index.html';
+            }
         }
     </script>
 </body>
