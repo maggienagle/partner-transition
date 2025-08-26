@@ -20,9 +20,49 @@
             </div>
             
             <div class="booking-section">
-                <button class="book-appointment-btn" onclick="goToInterstitial()">
-                    Book appointment
-                </button>
+                <h3 class="available-appointments-title">Available appointments</h3>
+                
+                <!-- Day 1: Today -->
+                <div class="day-section">
+                    <p class="appointment-date" id="day1-date">Today</p>
+                    <div class="timeslot-grid">
+                        <button class="timeslot-btn" onclick="goToInterstitial()">10:00 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">2:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">6:15 PM</button>
+                    </div>
+                </div>
+                
+                <!-- Day 2: Tomorrow -->
+                <div class="day-section">
+                    <p class="appointment-date" id="day2-date">Tomorrow</p>
+                    <div class="timeslot-grid">
+                        <button class="timeslot-btn" onclick="goToInterstitial()">8:30 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">10:15 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">12:45 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">2:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">4:15 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">6:30 PM</button>
+                    </div>
+                </div>
+                
+                <!-- Day 3: Day After Tomorrow -->
+                <div class="day-section">
+                    <p class="appointment-date" id="day3-date">Day After Tomorrow</p>
+                    <div class="timeslot-grid">
+                        <button class="timeslot-btn" onclick="goToInterstitial()">9:00 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">9:45 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">10:30 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">11:15 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">12:00 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">1:15 PM</button>
+                        
+                        <button class="timeslot-btn" onclick="goToInterstitial()">2:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">3:45 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">4:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">5:15 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">6:45 PM</button>
+                    </div>
+                </div>
                 
                 <div class="powered-by">
                     <img src="assets/zocdoc-logo.svg" alt="Zocdoc" class="zocdoc-logo">
@@ -46,6 +86,34 @@
                 window.location.href = 'index.html';
             }
         }
+        
+        // Set dynamic dates for the 3 upcoming days
+        function setAppointmentDates() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 1);
+            const dayAfter = new Date(today);
+            dayAfter.setDate(today.getDate() + 2);
+            
+            const options = { 
+                weekday: 'short', 
+                month: 'short', 
+                day: 'numeric' 
+            };
+            
+            // Format dates
+            const todayFormatted = today.toLocaleDateString('en-US', options);
+            const tomorrowFormatted = tomorrow.toLocaleDateString('en-US', options);
+            const dayAfterFormatted = dayAfter.toLocaleDateString('en-US', options);
+            
+            // Update DOM elements
+            document.getElementById('day1-date').textContent = todayFormatted;
+            document.getElementById('day2-date').textContent = tomorrowFormatted;
+            document.getElementById('day3-date').textContent = dayAfterFormatted;
+        }
+        
+        // Initialize dates when page loads
+        document.addEventListener('DOMContentLoaded', setAppointmentDates);
     </script>
 </body>
 </html>
