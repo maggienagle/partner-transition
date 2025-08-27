@@ -19,7 +19,7 @@ class AutoInterstitialPage {
     // Get redirect URL - specific Zocdoc booking URL
     getRedirectUrl() {
         // Base booking URL
-        const baseUrl = 'https://www.zocdoc.com/booking/patientinfo/e245841b-0fb7-4ff8-917d-85657b97b706?referrerType=PatientHome';
+        const baseUrl = 'https://www.zocdoc.com/booking/patientinfo/03cfa413-5593-4b45-8142-bf70a808e18f';
         
         // Add UTM parameters for tracking
         const utmParams = new URLSearchParams({
@@ -28,7 +28,7 @@ class AutoInterstitialPage {
             utm_campaign: 'yelp_integration'
         });
         
-        return `${baseUrl}&${utmParams.toString()}`;
+        return `${baseUrl}?${utmParams.toString()}`;
     }
     
     startCountdown() {
