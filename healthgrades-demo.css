@@ -1,0 +1,219 @@
+/* Healthgrades Demo Page Styles */
+
+/* Sharp Sans Font Faces */
+@font-face {
+    font-family: 'SharpSans';
+    src: url('fonts/SharpSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('fonts/SharpSans-Semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SharpSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-weight: 500; /* Sharp Sans Medium for body text */
+    background: url('assets/healthgrades-background image.png') top center / 100% auto no-repeat;
+    color: #333333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Black opacity overlay covering the entire screen */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* 20% black opacity */
+    z-index: 1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* Above the black overlay */
+}
+
+/* Provider placeholder section */
+.provider-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.provider-placeholder h1 {
+    font-size: 1.5rem;
+    font-weight: 600; /* Sharp Sans SemiBold for headlines */
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.provider-placeholder p {
+    color: #666666;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 500; /* Sharp Sans Medium for body text */
+}
+
+/* Booking section - now inside provider container */
+.booking-section {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Available appointments section */
+.available-appointments-title {
+    font-size: 1.125rem;
+    font-weight: 600; /* Sharp Sans SemiBold */
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.appointment-date {
+    font-size: 0.95rem;
+    font-weight: 500; /* Sharp Sans Medium */
+    color: #666666;
+    margin-bottom: 1rem;
+}
+
+/* Day section styling */
+.day-section {
+    margin-bottom: 2rem;
+}
+
+.day-section:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+/* Timeslot grid */
+.timeslot-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Individual timeslot buttons */
+.timeslot-btn {
+    background-color: #D9E3FD; /* Updated to light blue */
+    color: #1C2150; /* Updated to dark blue */
+    font-size: 14px;
+    font-weight: 600; /* Sharp Sans SemiBold */
+    padding: 8px 4px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeslot-btn:hover {
+    background-color: #C5D4FB; /* Darker blue for hover */
+    transform: translateY(-1px);
+}
+
+.timeslot-btn:active {
+    transform: translateY(0);
+}
+
+/* Powered by Zocdoc section */
+.powered-by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600; /* Sharp Sans Medium for body text */
+}
+
+.zocdoc-logo {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timeslot-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+    }
+    
+    .timeslot-btn {
+        font-size: 13px;
+        padding: 6px 2px;
+        min-height: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .provider-section {
+        padding: 1.5rem;
+    }
+    
+    .provider-placeholder h1 {
+        font-size: 1.25rem;
+        font-weight: 600; /* Sharp Sans SemiBold for mobile headlines */
+    }
+    
+    .day-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .timeslot-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    
+    .timeslot-btn {
+        font-size: 12px;
+        padding: 6px 2px;
+        min-height: 30px;
+    }
+    
+    .available-appointments-title {
+        font-size: 1rem;
+    }
+    
+    .appointment-date {
+        font-size: 0.9rem;
+    }
+}

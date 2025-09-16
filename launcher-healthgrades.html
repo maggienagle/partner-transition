@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthgrades Experiment Launcher</title>
+    <!-- Preload critical Sharp Sans fonts for better performance -->
+    <link rel="preload" href="fonts/SharpSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SharpSans-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="launcher.css">
+</head>
+<body>
+    <div class="container">
+        <div class="experiment-header">
+            <h1>Booking for Syndicators</h1>
+        </div>
+        
+        <div class="options-section">
+            <div class="option-container">
+                <div class="option-description">
+                    <h3>Continue CTA</h3>
+                    <p>User must click "Book on Zocdoc" to proceed to the booking page</p>
+                </div>
+                <button class="experiment-btn" onclick="startFlow('manual')">
+                    Continue CTA
+                </button>
+            </div>
+            
+            <div class="option-container">
+                <div class="option-description">
+                    <h3>Auto-redirect</h3>
+                    <p>Automatically redirects after 10 seconds with countdown timer</p>
+                </div>
+                <button class="experiment-btn" onclick="startFlow('auto')">
+                    Auto-redirect
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startFlow(flowType) {
+            // Navigate to healthgrades page with flow parameter
+            window.location.href = `healthgrades-demo.html?flow=${flowType}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Zocdoc - Complete Your Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Auto-redirect specific styles */
+        .countdown-display {
+            margin-top: 1rem;
+            text-align: center;
+            color: #727272;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: block;
+            width: 100%;
+        }
+        
+        .countdown-display span {
+            font-weight: 600;
+            color: #333333;
+        }
+        
+        /* Ensure CTA section stacks vertically */
+        .cta-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+    </style>
+    <!-- Preload critical Sharp Sans fonts for better performance -->
+    <link rel="preload" href="fonts/SharpSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SharpSans-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <div class="central-section">
+                <div class="brand-logos">
+                    <div class="logo-container">
+                        <img src="assets/healthgrades-logo.png" alt="Healthgrades" class="brand-logo yelp-logo" id="yelp-logo">
+                    </div>
+                    <div class="transition-arrow">
+                        <div class="connection-animation">
+                            <svg width="50" height="24" viewBox="0 0 50 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="connection-path">
+                                <path d="M4 12L46 12M46 12L40 6M46 12L40 18" stroke="#e5e7eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="progress-dots">
+                                <div class="dot dot-1"></div>
+                                <div class="dot dot-2"></div>
+                                <div class="dot dot-3"></div>
+                                <div class="dot dot-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-container">
+                        <img src="assets/zocdoc-logo.svg" alt="Zocdoc" class="brand-logo zocdoc-logo" id="zocdoc-logo">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="message-section">
+                <div class="message-container">
+                    <h1 class="primary-message">Continue booking on Zocdoc</h1>
+                    <p class="secondary-message">
+                        Healthgrades partners with Zocdoc to book your appointment and connect directly with your provider
+                    </p>
+                </div>
+                
+                <div class="cta-section">
+                    <button class="manual-redirect-btn primary-cta" id="manual-redirect" onclick="proceedToZocdoc()">
+                        Book on Zocdoc
+                    </button>
+                    <div id="countdown-text" class="countdown-display">
+                        Redirecting in <span id="countdown">10</span> seconds
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script-auto-healthgrades.js"></script>
+</body>
+</html>

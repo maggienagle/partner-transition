@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Profile - Healthgrades Demo</title>
+    <!-- Preload critical Sharp Sans fonts for better performance -->
+    <link rel="preload" href="fonts/SharpSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/SharpSans-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="healthgrades-demo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="provider-section">
+            <!-- Simulated provider content would go here -->
+            <div class="provider-placeholder">
+                <h1>Dr. Sarah Matthews, MD</h1>
+                <p>Dermatologist • 4.9 ★ (203 reviews)</p>
+                <p>456 Medical Plaza, City, State</p>
+            </div>
+            
+            <div class="booking-section">
+                <h3 class="available-appointments-title">Available appointments</h3>
+                
+                <!-- Day 1: Today -->
+                <div class="day-section">
+                    <p class="appointment-date" id="day1-date">Today</p>
+                    <div class="timeslot-grid">
+                        <button class="timeslot-btn" onclick="goToInterstitial()">10:00 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">2:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">6:15 PM</button>
+                    </div>
+                </div>
+                
+                <!-- Day 2: Tomorrow -->
+                <div class="day-section">
+                    <p class="appointment-date" id="day2-date">Tomorrow</p>
+                    <div class="timeslot-grid">
+                        <button class="timeslot-btn" onclick="goToInterstitial()">8:30 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">10:15 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">12:45 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">2:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">4:15 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">6:30 PM</button>
+                    </div>
+                </div>
+                
+                <!-- Day 3: Day After Tomorrow -->
+                <div class="day-section">
+                    <p class="appointment-date" id="day3-date">Day After Tomorrow</p>
+                    <div class="timeslot-grid">
+                        <button class="timeslot-btn" onclick="goToInterstitial()">9:00 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">9:45 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">10:30 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">11:15 AM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">12:00 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">1:15 PM</button>
+                        
+                        <button class="timeslot-btn" onclick="goToInterstitial()">2:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">3:45 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">4:30 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">5:15 PM</button>
+                        <button class="timeslot-btn" onclick="goToInterstitial()">6:45 PM</button>
+                    </div>
+                </div>
+                
+                <div class="powered-by">
+                    <img src="assets/zocdoc-logo.svg" alt="Zocdoc" class="zocdoc-logo">
+                    <span>Powered by Zocdoc</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goToInterstitial() {
+            // Check URL parameters to determine which flow to use
+            const urlParams = new URLSearchParams(window.location.search);
+            const flow = urlParams.get('flow');
+            
+            // Navigate to the appropriate healthgrades interstitial page based on flow type
+            if (flow === 'auto') {
+                window.location.href = 'index-auto-healthgrades.html';
+            } else {
+                // Default to manual flow
+                window.location.href = 'index-healthgrades.html';
+            }
+        }
+        
+        // Set dynamic dates for the 3 upcoming days
+        function setAppointmentDates() {
+            const today = new Date();
+            const tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 1);
+            const dayAfter = new Date(today);
+            dayAfter.setDate(today.getDate() + 2);
+            
+            const options = { 
+                weekday: 'short', 
+                month: 'short', 
+                day: 'numeric' 
+            };
+            
+            // Format dates
+            const todayFormatted = today.toLocaleDateString('en-US', options);
+            const tomorrowFormatted = tomorrow.toLocaleDateString('en-US', options);
+            const dayAfterFormatted = dayAfter.toLocaleDateString('en-US', options);
+            
+            // Update DOM elements
+            document.getElementById('day1-date').textContent = todayFormatted;
+            document.getElementById('day2-date').textContent = tomorrowFormatted;
+            document.getElementById('day3-date').textContent = dayAfterFormatted;
+        }
+        
+        // Initialize dates when page loads
+        document.addEventListener('DOMContentLoaded', setAppointmentDates);
+    </script>
+</body>
+</html>
