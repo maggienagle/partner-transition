@@ -3,7 +3,7 @@ class AutoInterstitialPage {
     constructor() {
         this.manualRedirectBtn = document.getElementById('manual-redirect');
         this.redirectUrl = this.getRedirectUrl();
-        this.countdownSeconds = 10;
+        this.countdownSeconds = 5;
         this.countdownInterval = null;
         
         this.init();

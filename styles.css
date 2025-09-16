@@ -397,6 +397,30 @@ body {
     transform: translateY(-1px);
 }
 
+/* Countdown Display Styles */
+.countdown-display {
+    margin-top: 1rem;
+    text-align: center;
+    color: #727272;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+}
+
+.countdown-display span {
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Ensure CTA section stacks vertically */
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {

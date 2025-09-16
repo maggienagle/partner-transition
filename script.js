@@ -3,6 +3,8 @@ class InterstitialPage {
     constructor() {
         this.manualRedirectBtn = document.getElementById('manual-redirect');
         this.redirectUrl = this.getRedirectUrl();
+        this.countdownSeconds = 10;
+        this.countdownInterval = null;
         
         this.init();
     }
@@ -12,6 +14,7 @@ class InterstitialPage {
         this.preloadImages();
         this.trackPageView();
         this.focusOnCTA();
+        this.startCountdown();
     }
     
     // Get redirect URL - specific Zocdoc booking URL
@@ -77,6 +80,9 @@ class InterstitialPage {
     }
     
     proceedToZocdoc() {
+        // Clear countdown when manually clicked
+        this.clearCountdown();
+        
         // Show loading state
         this.showRedirectingState();
         
@@ -155,6 +161,32 @@ class InterstitialPage {
             userAgent: navigator.userAgent,
             timestamp: new Date().toISOString()
         });
+    }
+    
+    startCountdown() {
+        // Start countdown immediately
+        this.countdownInterval = setInterval(() => {
+            this.countdownSeconds--;
+            this.updateCountdown();
+            
+            if (this.countdownSeconds <= 0) {
+                this.proceedToZocdoc();
+            }
+        }, 1000);
+    }
+    
+    updateCountdown() {
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) {
+            countdownElement.textContent = this.countdownSeconds;
+        }
+    }
+    
+    clearCountdown() {
+        if (this.countdownInterval) {
+            clearInterval(this.countdownInterval);
+            this.countdownInterval = null;
+        }
     }
 }
 
