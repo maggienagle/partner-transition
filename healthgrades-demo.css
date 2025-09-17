@@ -180,6 +180,13 @@ body::before {
     }
 }
 
+/* Mobile background image */
+@media (max-width: 768px) {
+    body {
+        background: url('assets/healthgrades-background-mobile.png') top center / 100% auto no-repeat;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding: 1rem 0.5rem;
