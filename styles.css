@@ -167,7 +167,7 @@ body {
 .dot {
     width: 5px;
     height: 5px;
-    background: #F8CC30;
+    background: #9CA3AF;
     border-radius: 50%;
     opacity: 0;
     transform: scale(0);
@@ -187,26 +187,27 @@ body {
     20% { 
         opacity: 1; 
         transform: scale(1.2);
-        background: #F8CC30;
+        background: #9CA3AF;
     }
     40% { 
         opacity: 1; 
         transform: scale(1);
-        background: #FBD142;
+        background: #9CA3AF;
     }
     60% { 
         opacity: 0.7; 
         transform: scale(0.8);
-        background: #F8CC30;
+        background: #9CA3AF;
     }
     80% { 
-        opacity: 0.3; 
+        opacity: 0.4; 
         transform: scale(0.6);
-        background: #F8CC30;
+        background: #9CA3AF;
     }
     100% { 
-        opacity: 0; 
-        transform: scale(0);
+        opacity: 0.2; 
+        transform: scale(0.5);
+        background: #9CA3AF;
     }
 }
 
@@ -657,8 +658,8 @@ body {
     --secondary-blue: #3b82f6;
     --success-green: #059669;
     --warning-orange: #d97706;
-    --animation-yellow: #F8CC30; /* Dot animation primary color */
-    --animation-yellow-bright: #FBD142; /* Dot animation peak color */
+    --animation-grey: #9CA3AF; /* Dot animation primary color */
+    --animation-grey-light: #D1D5DB; /* Dot animation peak color */
     --bg-gray-50: #f8fafc;
     --bg-gray-100: #f1f5f9;
     --text-primary: #333333; /* Primary text color */
