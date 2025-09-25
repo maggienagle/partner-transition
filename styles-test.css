@@ -1,0 +1,1326 @@
+/* 🧪 TEST CSS FILE - Logo Animation Testing
+ * This is a SAFE COPY for testing logo animations without affecting production pages
+ * Original: styles.css
+ */
+
+body {
+    padding-top: 0; /* No test banner padding needed */
+}
+
+/* 🧪 OVERRIDE MAIN BUTTON STYLES - Use real interstitial yellow button styles */
+.manual-redirect-btn.primary-cta {
+    background: #FEED5A !important;
+    color: #333333 !important;
+    border: none !important;
+    height: 48px !important;
+    padding: 0 3rem !important;
+    border-radius: 12px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    width: auto !important;
+    max-width: 300px !important;
+    box-shadow: 0 8px 32px rgba(254, 237, 90, 0.4) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    font-family: inherit !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.manual-redirect-btn.primary-cta::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+    transition: left 0.5s !important;
+}
+
+.manual-redirect-btn.primary-cta:hover::before {
+    left: 100% !important;
+}
+
+.manual-redirect-btn.primary-cta:hover {
+    background: #FDE047 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 40px rgba(254, 237, 90, 0.6) !important;
+}
+
+.manual-redirect-btn.primary-cta:active {
+    transform: translateY(-1px) !important;
+}
+
+/* 🧪 OVERRIDE COUNTDOWN TEXT STYLES - Use real interstitial text styles */
+.countdown-display {
+    margin-top: 1rem !important;
+    text-align: center !important;
+    color: #727272 !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.countdown-display span {
+    font-weight: 600 !important;
+    color: #333333 !important;
+}
+
+/* 🧪 OVERRIDE TEST RESTART BUTTON STYLES - Use same yellow style */
+.test-btn-main {
+    background: #FEED5A !important;
+    color: #333333 !important;
+    border: none !important;
+    height: 48px !important;
+    padding: 0 3rem !important;
+    border-radius: 12px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+    box-shadow: 0 8px 32px rgba(254, 237, 90, 0.4) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    font-family: inherit !important;
+}
+
+.test-btn-main::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+    transition: left 0.5s !important;
+}
+
+.test-btn-main:hover::before {
+    left: 100% !important;
+}
+
+.test-btn-main:hover {
+    background: #FDE047 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 40px rgba(254, 237, 90, 0.6) !important;
+}
+
+.test-btn-main:active {
+    transform: translateY(-1px) !important;
+}
+
+/* TEST CONTROLS STYLES */
+.test-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    z-index: 1000;
+    max-width: 280px;
+}
+
+.test-controls h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 14px;
+    color: #4ecdc4;
+}
+
+.version-switcher {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(76, 205, 196, 0.3);
+}
+
+.version-switcher label {
+    display: block;
+    color: #4ecdc4;
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.version-select {
+    width: 100%;
+    background: rgba(76, 205, 196, 0.1);
+    border: 1px solid #4ecdc4;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.version-select option {
+    background: #333;
+    color: white;
+}
+
+.test-btn-main {
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(76, 205, 196, 0.3);
+}
+
+.test-btn-main:hover {
+    background: #45b7d1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 205, 196, 0.4);
+}
+
+/* Custom Font Declarations - Sharp Sans */
+@font-face {
+    font-family: 'SharpSans';
+    src: url('fonts/SharpSans-Medium.woff2') format('woff2'),
+         url('fonts/SharpSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SharpSans';
+    src: url('fonts/SharpSans-Semibold.woff2') format('woff2'),
+         url('fonts/SharpSans-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SharpSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 500; /* Sharp Sans Medium for body text */
+    background: white;
+    min-height: 100vh;
+    color: #333333; /* Primary text color */
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Central Section - Animation as main focus */
+.central-section {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.brand-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* 🧪 LOGO CONTAINER - PRIMARY TESTING AREA */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 100px;
+    height: 100px;
+    padding: 1.25rem;
+    border-radius: 50%;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+    /* 🧪 TEST AREA - Modify these properties for logo container experiments */
+    /* Examples:
+     * transform: scale(1.1);
+     * border: 3px solid #4ecdc4;
+     * background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+     * box-shadow: 0 12px 48px rgba(76, 205, 196, 0.3);
+     */
+}
+
+/* 🧪 FIRST LOGO ANIMATION - Healthgrades logo slides left from center */
+.logo-container:first-child {
+    position: relative;
+    z-index: 3;
+    animation: slideToLeft 0.8s ease-out forwards;
+    
+    /* 🧪 TEST AREA - Modify animation for first logo */
+    /* Examples:
+     * animation: customSlideLeft 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+     * animation: bounceIn 1s ease-out forwards;
+     */
+}
+
+/* 🧪 SECOND LOGO ANIMATION - Zocdoc logo slides right from center */
+.logo-container:last-child {
+    position: relative;
+    z-index: 1;
+    animation: slideToRight 0.8s ease-out forwards;
+    
+    /* 🧪 TEST AREA - Modify animation for second logo */
+    /* Examples:
+     * animation: customSlideRight 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+     * animation: fadeInUp 1s ease-out forwards;
+     */
+}
+
+/* 🧪 KEYFRAMES TESTING AREA - Current slide animations */
+@keyframes slideToLeft {
+    0% {
+        transform: translateX(70px);
+        /* 🧪 TEST - Add additional properties: opacity: 0; scale: 0.5; rotate: 180deg; */
+    }
+    100% {
+        transform: translateX(0);
+        /* 🧪 TEST - Add final state properties: opacity: 1; scale: 1; rotate: 0deg; */
+    }
+}
+
+@keyframes slideToRight {
+    0% {
+        transform: translateX(-70px);
+        z-index: 1;
+        /* 🧪 TEST - Add additional properties: opacity: 0; scale: 0.5; rotate: -180deg; */
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 2;
+        /* 🧪 TEST - Add final state properties: opacity: 1; scale: 1; rotate: 0deg; */
+    }
+}
+
+/* 🧪 VERSION 1 ANIMATIONS - Overlapping Logos (No Dots) */
+
+/* Version 1: Logos slide to final overlapping positions */
+@keyframes slideToLeftOverlap {
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0px); /* End at natural position */
+    }
+}
+
+@keyframes slideToRightOverlap {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0px); /* End at natural position - margin-left creates overlap */
+    }
+}
+
+/* Version 2 specific styles - Maintain flexbox but force overlap */
+.version-1 .brand-logos {
+    gap: 0 !important;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Remove transition arrow completely from layout in Version 1 */
+.version-1 .transition-arrow {
+    display: none !important;
+}
+
+/* Version 1 logo containers - keep relative positioning but add overlap */
+.version-1 .logo-container {
+    position: relative !important;
+    width: 100px;
+    height: 100px;
+}
+
+/* Override original animations with higher specificity - Force true overlap */
+.version-1 .brand-logos .logo-container:first-child {
+    animation: slideToLeftOverlap 0.8s ease-out forwards !important;
+    position: relative !important;
+    z-index: 3 !important; /* Ensure left logo appears in front */
+}
+
+.version-1 .brand-logos .logo-container:last-child {
+    animation: slideToRightOverlap 0.8s ease-out forwards !important;
+    position: relative !important;
+    z-index: 2 !important; /* Ensure right logo appears behind left logo */
+    margin-left: -12px !important; /* Force 12px overlap by pulling right logo left (12% of 100px) */
+}
+
+/* Hide dots in Version 1 */
+.version-1 .progress-dots {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+/* 🔄 RESTART ANIMATION STATE - Resets everything to initial state */
+.restarting-animation * {
+    animation: none !important;
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    transform: none !important;
+    opacity: 1 !important;
+}
+
+/* Reset content sections during restart */
+.restarting-animation .message-section,
+.restarting-animation .cta-section,
+.restarting-animation .instructions {
+    opacity: 0 !important;
+    transform: translateY(20px) !important;
+}
+
+/* Reset logo containers during restart */
+.restarting-animation .logo-container:first-child {
+    transform: translateX(50px) !important;
+}
+
+.restarting-animation .logo-container:last-child {
+    transform: translateX(-50px) !important;
+}
+
+/* Reset dots during restart */
+.restarting-animation .dot {
+    opacity: 0 !important;
+    transform: scale(0) !important;
+}
+
+/* 🧪 VERSION 3 ANIMATIONS - Early Visible Dots (No Scale/Transparency) */
+
+/* Version 3: Logos slide apart very close together with much tighter overall spacing */
+.version-3 .brand-logos {
+    gap: 0.25rem !important; /* Much smaller gap between logo and dots section */
+}
+
+.version-3 .brand-logos .logo-container:first-child {
+    animation: slideToLeftCloser 0.8s ease-out forwards !important;
+}
+
+.version-3 .brand-logos .logo-container:last-child {
+    animation: slideToRightCloser 0.8s ease-out forwards !important;
+}
+
+/* Also override mobile gaps for Version 3 - tighter for closer logos */
+@media (max-width: 768px) {
+    .version-3 .brand-logos {
+        gap: 0.15rem !important; /* Tighter gap for closer logos */
+    }
+}
+
+@media (max-width: 480px) {
+    .version-3 .brand-logos {
+        gap: 0.1rem !important; /* Very tight on small mobile */
+    }
+}
+
+@keyframes slideToLeftCloser {
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(-6px); /* Even closer - only 12px total gap */
+    }
+}
+
+@keyframes slideToRightCloser {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(6px); /* Even closer - only 12px total gap */
+    }
+}
+
+/* Version 3 dots: Always visible, sequential filled states with very smooth transitions */
+.version-3 .dot {
+    animation: dotSequentialFill 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite !important; /* Smoother 4s cycle with gentle easing */
+    background: #EBEAE9; /* Start with light grey - no !important so animation can override */
+    opacity: 1 !important;
+    transform: scale(1) !important;
+    z-index: 1 !important; /* Keep dots behind logos but above background */
+    transition: background-color 0.3s ease-in-out !important; /* Smooth color transitions between keyframes */
+}
+
+/* Proper spacing between dots for Version 3 - Override space-between layout */
+.version-3 .brand-logos .progress-dots {
+    padding: 0 2px !important; /* Minimal padding around dots */
+    gap: 6px !important; /* 6px gaps between individual dots */
+    justify-content: center !important; /* Use center + gap instead of space-between */
+    display: flex !important; /* Ensure flex layout */
+}
+
+/* Also override any default progress-dots rules for Version 3 */
+.version-3 .progress-dots {
+    padding: 0 2px !important; /* Minimal padding around dots */
+    gap: 6px !important; /* 6px gaps between individual dots */
+    justify-content: center !important; /* Use center + gap instead of space-between */
+    display: flex !important; /* Ensure flex layout */
+}
+
+/* Mobile responsive overrides for Version 3 dots */
+@media (max-width: 768px) {
+    .version-3 .progress-dots {
+        padding: 0 2px !important;
+        gap: 5px !important; /* Proportional spacing on mobile */
+        justify-content: center !important; /* Override space-between on mobile too */
+    }
+}
+
+@media (max-width: 480px) {
+    .version-3 .progress-dots {
+        padding: 0 1px !important;
+        gap: 4px !important; /* Slightly tighter on small mobile */
+        justify-content: center !important; /* Override space-between on mobile too */
+    }
+}
+
+/* Ensure logos stay above dots in Version 3 */
+.version-3 .logo-container {
+    z-index: 5 !important; /* Logos appear above dots */
+    position: relative !important; /* Needed for z-index to work */
+}
+
+/* Sequential fill - only one dot filled at a time with smoother timing */
+.version-3 .dot-1 {
+    animation-delay: 0s !important;
+}
+
+.version-3 .dot-2 {
+    animation-delay: 1.33s !important; /* Adjusted for 4s cycle - smoother progression */
+}
+
+.version-3 .dot-3 {
+    animation-delay: 2.67s !important; /* Adjusted for 4s cycle - smoother progression */
+}
+
+/* Hide dot-4 in Version 3 to have only 3 dots */
+.version-3 .dot-4 {
+    display: none !important;
+}
+
+@keyframes dotSequentialFill {
+    0% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #EBEAE9; /* Light grey - unfilled */
+    }
+    8% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #D6D5D3; /* Very gradual start */
+    }
+    15% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #C5C4C2; /* Gradual transition - medium light */
+    }
+    20% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #B3B1AF; /* Smoother intermediate step */
+    }
+    22% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #9A9896; /* Gradual transition - medium */
+    }
+    25% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #747474; /* Dark grey - fully filled */
+    }
+    28% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #8A8987; /* Smoother transition back */
+    }
+    32% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #9A9896; /* Gradual transition back - medium */
+    }
+    38% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #B3B1AF; /* Smoother intermediate step back */
+    }
+    42% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #C5C4C2; /* Gradual transition back - medium light */
+    }
+    48% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #D6D5D3; /* Very gradual end */
+    }
+    55% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #EBEAE9; /* Back to unfilled */
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #EBEAE9; /* Stay unfilled for rest of cycle */
+    }
+}
+
+/* 🧪 CUSTOM KEYFRAMES TESTING AREA - Add your experimental animations below */
+
+/*
+@keyframes customSlideLeft {
+    0% {
+        transform: translateX(140px) scale(0.3) rotate(360deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(35px) scale(1.2) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateX(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes customSlideRight {
+    0% {
+        transform: translateX(-140px) scale(0.3) rotate(-360deg);
+        opacity: 0;
+        z-index: 1;
+    }
+    50% {
+        transform: translateX(-35px) scale(1.2) rotate(-180deg);
+        opacity: 0.7;
+        z-index: 1;
+    }
+    100% {
+        transform: translateX(0) scale(1) rotate(0deg);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3) translateX(70px);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05) translateX(35px);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(0.9) translateX(10px);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1) translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px) translateX(-70px);
+        opacity: 0;
+        z-index: 1;
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+        z-index: 2;
+    }
+}
+*/
+
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🧪 LOGO HOVER EFFECTS - Modify these for hover testing */
+.logo-container:hover {
+    transform: translateY(-2px);
+    
+    /* 🧪 TEST AREA - Add hover effects */
+    /* Examples:
+     * transform: translateY(-5px) scale(1.1) rotate(5deg);
+     * box-shadow: 0 20px 40px rgba(76, 205, 196, 0.4);
+     * border: 2px solid #4ecdc4;
+     */
+}
+
+/* Ensure hover works after slide animation */
+.logo-container:last-child:hover {
+    transform: translateY(-2px);
+}
+
+.brand-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    
+    /* 🧪 TEST AREA - Logo image effects */
+    /* Examples:
+     * filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+     * transition: filter 0.3s ease;
+     */
+}
+
+/* 🧪 DOT ANIMATION TESTING AREA */
+/* Progressive Dot Animation */
+.transition-arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connection-animation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connection-path {
+    position: relative;
+    z-index: 1;
+    opacity: 0; /* Hide the arrow path */
+}
+
+.progress-dots {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    z-index: 2;
+}
+
+/* 🧪 DOT STYLING - Modify dot appearance */
+.dot {
+    width: 4px;
+    height: 4px;
+    background: #9CA3AF;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0);
+    animation: dotProgress 3s ease-in-out infinite;
+    
+    /* 🧪 TEST AREA - Modify dot properties */
+    /* Examples:
+     * background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+     * box-shadow: 0 0 10px rgba(76, 205, 196, 0.8);
+     * width: 8px; height: 8px;
+     */
+}
+
+.dot-1 { animation-delay: 0.6s; } /* Earlier - was 1.0s */
+.dot-2 { animation-delay: 0.8s; } /* Earlier - was 1.2s */
+.dot-3 { animation-delay: 1.0s; } /* Earlier - was 1.4s */
+.dot-4 { animation-delay: 1.2s; } /* Earlier - was 1.6s */
+
+/* 🧪 DOT ANIMATION KEYFRAMES - Modify dot movement */
+@keyframes dotProgress {
+    0% { 
+        opacity: 0; 
+        transform: scale(0);
+        /* 🧪 TEST - Add: background: #ff6b6b; */
+    }
+    20% { 
+        opacity: 1; 
+        transform: scale(1.1); /* Reduced from 1.2 - less overshoot */
+        background: #9CA3AF;
+        /* 🧪 TEST - Change colors: background: #4ecdc4; */
+    }
+    40% { 
+        opacity: 1; 
+        transform: scale(1);
+        background: #9CA3AF;
+    }
+    60% { 
+        opacity: 0.8; /* Increased from 0.7 - less fade */
+        transform: scale(0.9); /* Increased from 0.8 - less shrink */
+        background: #9CA3AF;
+    }
+    80% { 
+        opacity: 0.6; /* Increased from 0.4 - less fade */
+        transform: scale(0.85); /* Increased from 0.6 - less shrink */
+        background: #9CA3AF;
+    }
+    100% { 
+        opacity: 0.4; /* Increased from 0.2 - more visible at end */
+        transform: scale(0.8); /* Increased from 0.5 - less shrink */
+        background: #9CA3AF;
+    }
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+
+.message-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeInContent 0.5s ease-out 0.3s forwards;
+}
+
+/* CTA Section - Button centered under headline and description */
+.cta-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInContent 0.5s ease-out 0.3s forwards;
+}
+
+/* Messages */
+.message-container {
+    max-width: 500px;
+}
+
+.primary-message {
+    font-size: 1.75rem;
+    font-weight: 600; /* Sharp Sans SemiBold for headlines */
+    line-height: 1.2;
+    color: #333333; /* Primary text color */
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.secondary-message {
+    font-size: 1.125rem;
+    color: #727272; /* Secondary text color */
+    font-weight: 500; /* Sharp Sans Medium for body text */
+    line-height: 1.7;
+}
+
+/* Instructions */
+.instructions {
+    width: 100%;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeInContent 0.5s ease-out 0.6s forwards;
+}
+
+.instruction-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid #E2E1DF;
+    text-align: left;
+}
+
+.instruction-content h3 {
+    font-size: 1.125rem;
+    font-weight: 600; /* Sharp Sans SemiBold for headlines */
+    color: #333333; /* Primary text color */
+    margin-bottom: 1.5rem;
+}
+
+.callout-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.callout-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.callout-icon-inline {
+    flex-shrink: 0;
+    color: #333333;
+    font-size: 20px;
+    margin-top: 0.125rem;
+}
+
+/* Material Icons styling */
+.callout-icon-inline.material-symbols-outlined {
+    font-variation-settings: 
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20;
+}
+
+.callout-text h4 {
+    font-size: 1rem;
+    font-weight: 600; /* Sharp Sans SemiBold */
+    color: #333333; /* Primary text color */
+    margin-bottom: 0.25rem;
+}
+
+.callout-text p {
+    color: #727272; /* Secondary text color */
+    font-weight: 500; /* Sharp Sans Medium for body text */
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+/* Button Styles */
+.manual-redirect-btn {
+    background: #4ecdc4; /* Changed to test color */
+    color: white; /* Changed to white for test */
+    border: none;
+    height: 48px;
+    padding: 0 2rem;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500; /* Sharp Sans Medium for regular buttons */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Primary CTA styling for prominent button */
+.manual-redirect-btn.primary-cta {
+    background: #4ecdc4; /* Test color instead of yellow */
+    color: white;
+    height: 48px;
+    padding: 0 3rem;
+    font-size: 16px;
+    font-weight: 600; /* Sharp Sans SemiBold for prominent CTA */
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(76, 205, 196, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.manual-redirect-btn.primary-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.manual-redirect-btn.primary-cta:hover::before {
+    left: 100%;
+}
+
+.manual-redirect-btn:hover {
+    background: #45b7d1; /* Test hover color */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(69, 183, 209, 0.5);
+}
+
+.manual-redirect-btn.primary-cta:hover {
+    background: #45b7d1;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(69, 183, 209, 0.6);
+}
+
+.manual-redirect-btn:active {
+    transform: translateY(0);
+}
+
+.manual-redirect-btn.primary-cta:active {
+    transform: translateY(-1px);
+}
+
+/* Countdown Display Styles */
+.countdown-display {
+    margin-top: 1rem;
+    text-align: center;
+    color: #4ecdc4; /* Changed to test color */
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+}
+
+.countdown-display span {
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Ensure CTA section stacks vertically */
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .main-content {
+        padding-top: 1rem;
+    }
+    
+    .central-section {
+        margin-bottom: 2rem;
+    }
+    
+    .brand-logos {
+        flex-direction: row;
+        gap: 0.375rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    
+    .logo-container {
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        padding: 1rem;
+    }
+    
+    /* Responsive slide animation for tablet */
+    @keyframes slideToLeft {
+        0% {
+            transform: translateX(56px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideToRight {
+        0% {
+            transform: translateX(-56px);
+            z-index: 1;
+        }
+        100% {
+            transform: translateX(0);
+            z-index: 2;
+        }
+    }
+    
+    /* Version 2 responsive overlap for tablet (20px overlap) */
+    .version-1 .logo-container {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .version-1 .brand-logos .logo-container:first-child {
+        position: relative !important;
+        z-index: 3 !important;
+    }
+    
+    .version-1 .brand-logos .logo-container:last-child {
+        margin-left: -10px !important; /* Create 10px overlap (12% of 80px width) */
+        position: relative !important;
+        z-index: 2 !important;
+    }
+    
+    @keyframes slideToLeftOverlap {
+        0% {
+            transform: translateX(40px);
+        }
+        100% {
+            transform: translateX(0px); /* End at natural position for tablet */
+        }
+    }
+    
+    @keyframes slideToRightOverlap {
+        0% {
+            transform: translateX(-40px);
+        }
+        100% {
+            transform: translateX(0px); /* End at natural position for tablet */
+        }
+    }
+    
+    .brand-logo {
+        height: 40px;
+    }
+    
+    .connection-animation {
+        flex-shrink: 0;
+    }
+    
+    .connection-path {
+        width: 42px;
+        height: 20px;
+    }
+    
+    .progress-dots {
+        padding: 0 6px;
+    }
+    
+    .dot {
+        width: 3px;
+        height: 3px;
+    }
+    
+    .primary-message {
+        font-size: 1.5rem;
+    }
+    
+    .cta-section {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .instruction-card {
+        padding: 1.5rem;
+    }
+    
+    .instruction-content h3 {
+        font-size: 1rem;
+    }
+    
+    .callout-list {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem 20px;
+    }
+    
+    .main-content {
+        padding-top: 0.5rem;
+        gap: 1.5rem;
+    }
+    
+    .central-section {
+        margin-bottom: 1.5rem;
+    }
+    
+    .brand-logos {
+        gap: 0.375rem;
+    }
+    
+    .logo-container {
+        width: 70px;
+        height: 70px;
+        padding: 0.75rem;
+    }
+    
+    /* Responsive slide animation for mobile */
+    @keyframes slideToLeft {
+        0% {
+            transform: translateX(44px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideToRight {
+        0% {
+            transform: translateX(-44px);
+            z-index: 1;
+        }
+        100% {
+            transform: translateX(0);
+            z-index: 2;
+        }
+    }
+    
+    /* Version 2 responsive overlap for mobile (16px overlap) */
+    .version-1 .logo-container {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .version-1 .brand-logos .logo-container:first-child {
+        position: relative !important;
+        z-index: 3 !important;
+    }
+    
+    .version-1 .brand-logos .logo-container:last-child {
+        margin-left: -8px !important; /* Create 8px overlap (12% of 70px width) */
+        position: relative !important;
+        z-index: 2 !important;
+    }
+    
+    @keyframes slideToLeftOverlap {
+        0% {
+            transform: translateX(35px);
+        }
+        100% {
+            transform: translateX(0px); /* End at natural position for mobile */
+        }
+    }
+    
+    @keyframes slideToRightOverlap {
+        0% {
+            transform: translateX(-35px);
+        }
+        100% {
+            transform: translateX(0px); /* End at natural position for mobile */
+        }
+    }
+    
+    .brand-logo {
+        height: 35px;
+    }
+    
+    .connection-path {
+        width: 34px;
+        height: 18px;
+    }
+    
+    .progress-dots {
+        padding: 0 4px;
+    }
+    
+    .dot {
+        width: 3px;
+        height: 3px;
+    }
+    
+    .primary-message {
+        font-size: 1.375rem;
+    }
+    
+    .secondary-message {
+        font-size: 1rem;
+    }
+    
+    .instruction-card {
+        padding: 24px;
+    }
+    
+    .instruction-content h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .callout-list {
+        gap: 0.75rem;
+    }
+    
+    .callout-item {
+        gap: 0.5rem;
+    }
+    
+    .callout-icon-inline {
+        font-size: 18px;
+    }
+    
+    .callout-icon-inline.material-symbols-outlined {
+        font-variation-settings: 
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 18;
+    }
+    
+    .callout-text h4 {
+        font-size: 0.9rem;
+    }
+    
+    .callout-text p {
+        font-size: 0.85rem;
+    }
+    
+    .cta-section {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .manual-redirect-btn.primary-cta {
+        height: 48px;
+        padding: 0 2rem;
+        font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Animation for page load */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Removed global page load animation - now using specific timing for each section */
+
+/* Brand colors and elements */
+:root {
+    --primary-blue: #1e40af;
+    --secondary-blue: #3b82f6;
+    --success-green: #059669;
+    --warning-orange: #d97706;
+    --animation-grey: #9CA3AF; /* Dot animation primary color */
+    --animation-grey-light: #D1D5DB; /* Dot animation peak color */
+    --bg-gray-50: #f8fafc;
+    --bg-gray-100: #f1f5f9;
+    --text-primary: #333333; /* Primary text color */
+    --text-secondary: #727272; /* Secondary text color */
+    --button-bg: #FEED5A; /* Button background */
+    --button-bg-hover: #FDE047; /* Button hover background */
+    --button-text: #333333; /* Button text color */
+    
+    /* 🧪 TEST VARIABLES - Add your experimental colors here */
+    --test-primary: #4ecdc4;
+    --test-secondary: #45b7d1;
+    --test-accent: #96ceb4;
+    --test-highlight: #ffeaa7;
+    --test-danger: #ff6b6b;
+}
