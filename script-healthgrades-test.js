@@ -28,9 +28,11 @@ class TestInterstitialPage {
     }
     
     initializeVersion() {
-        // Set Version 1 as default
-        this.container.classList.add('version-1');
-        console.log('🧪 TEST: Initialized with Version 1 (Dots Animation)');
+        // Set Version 2 as default since it's first in dropdown
+        this.currentVersion = 2;
+        this.container.classList.add('version-2');
+        this.versionSelect.value = '2';
+        console.log('🧪 TEST: Initialized with Version 2 (Dots with Scale) - first option');
     }
     
     logTestMode() {

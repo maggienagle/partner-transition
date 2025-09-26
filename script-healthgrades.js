@@ -100,22 +100,22 @@ class InterstitialPage {
     }
     
     showRedirectingState() {
-        const primaryMessage = document.querySelector('.primary-message');
-        const footerText = document.querySelector('.footer-text');
+        const countdownText = document.getElementById('countdown-text');
         const manualBtn = document.querySelector('.manual-redirect-btn');
         
-        if (primaryMessage) {
-            primaryMessage.textContent = 'Redirecting to Zocdoc...';
-        }
+        // Keep title unchanged - only update countdown and button state
         
-        if (footerText) {
-            footerText.innerHTML = 'Taking you to Zocdoc now...';
+        if (countdownText) {
+            countdownText.textContent = 'Redirecting...';
+            countdownText.style.color = '#727272';
         }
         
         if (manualBtn) {
+            // Keep button text as "Book on Zocdoc" - only disable and style it
             manualBtn.disabled = true;
-            manualBtn.textContent = 'Redirecting...';
-            manualBtn.style.opacity = '0.6';
+            manualBtn.style.opacity = '0.7';
+            manualBtn.style.background = '#e5e7eb';
+            manualBtn.style.color = '#9ca3af';
         }
     }
     
